@@ -81,7 +81,7 @@ const CreatorCollections = () => {
 
     if (error) {
         console.error('Error:', error);
-        return <div>Ошибка: {error}</div>;
+        return <div>Error: {error}</div>;
     }
 
     const handleProfileClick = (userId) => {
