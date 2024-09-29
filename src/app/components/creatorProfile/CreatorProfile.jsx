@@ -16,7 +16,7 @@ const CreatorProfile = ({ userId }) => {
             try {
                 const response = await fetch(`/api/creator?userId=${userId}`);
                 if (!response.ok) {
-                    throw new Error('Ошибка при загрузке профиля создателя');
+                    throw new Error(`Error loading the creator's profile`);
                 }
                 const data = await response.json();
                 setCreatorData(data);

@@ -23,7 +23,7 @@ const CreatorCollections = () => {
             try {
                 const response = await fetch('/api/collections');
                 if (!response.ok) {
-                    throw new Error('Ошибка при загрузке коллекций');
+                    throw new Error('Error loading collections');
                 }
                 const data = await response.json();
                 console.log('Fetched collections:', data);
