@@ -1,0 +1,69 @@
+.discoverItemsContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.discoverItemsContainer h1{
+    font-size: 54px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.discoverItemsWrapper{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.nft_details{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.nft_item{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 14px;
+    border-radius: 23px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.299);
+}
+.nft_item img{
+    border-radius: 23px;
+}
+.nft_details h3{
+    font-size: 21px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.priceCurcBtnWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.priceCurcBtnWrapper button{
+    font-size: 14px;
+}
+.priceCurc{
+    display: flex;
+    gap: 5px;
+}
+.priceCurc span:nth-last-child(1){
+    color: #94A3B8;
+}
+.loaderWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+}
+.noNFTs{
+    margin-bottom: 173px;
+}
+@media (max-width: 1024px){
+    .discoverItemsContainer h1{
+        font-size: 42px;
+    }
+}

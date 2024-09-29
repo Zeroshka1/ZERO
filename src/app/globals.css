@@ -1,42 +1,105 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
-
-html,
-body {
-  max-width: 100vw;
+body,html{
   overflow-x: hidden;
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body::-webkit-scrollbar {
+  width: 3px;
+  height: 2px;
+  background-color: #ffffff;
 }
-
+body::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 20px;
+}
+.hiddenScroll {
+  overflow-y: hidden
+}
+button a{
+  color: #000;
+}
 * {
-  box-sizing: border-box;
+  text-decoration: none;
   padding: 0;
   margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.blackBtn a{
+  color: white;
+}
+.blackBtn {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 16px;
+  font-weight: 600px;
+  cursor: pointer;
+}
+.blackBtn.disabled{
+  background-color: rgb(151, 151, 151);
+  color: rgb(101, 101, 101);
+  cursor: not-allowed;
+}
+.whiteBtn {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 16px 24px;
+  border: none;
+  outline-offset: -1px;
+  outline: 1px solid rgb(0, 0, 0);
+  border-radius: 16px;
+  font-weight: 600px;
+  cursor: pointer;
+}
+
+.embla {
+  max-width: 100%;
+  margin: auto;
+}
+.embla__viewport {
+  overflow: hidden;
+  height: 430px;
+}
+.embla__container {
+  display: flex;
+  overflow: visible;
+  touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 80%;
+  }
+  .embla__viewport {
+    overflow: visible;
+  }
+}
+@media (max-width: 450px) {
+  .embla__viewport {
+    overflow: visible;
   }
 }

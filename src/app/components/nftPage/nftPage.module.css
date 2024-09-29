@@ -1,0 +1,282 @@
+.nftWrapper{
+    padding: 35px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FAFAFA;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.299);
+    border-radius: 24px;
+    margin: 80px 0 130px;
+}
+.nftImage{
+    width: 400px;
+    height: 400px;
+    border-radius: 24px;
+}
+.infoWrapper{
+    max-width: 470px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.titleAndDesc h1{
+    font-size: 51px;
+    overflow-wrap: break-word;
+    word-wrap: break-word; 
+    hyphens: auto;
+
+}
+.titleAndDesc p{
+    font-size: 19px;
+    color: #888888;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.priceAndCur{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.priceAndCurWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.priceAndCurWrapper h3{
+    font-size: 32px;
+    font-weight: 500;
+}
+.priceAndCurAndBtn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.walletBtn{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.loaderWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+}
+.creatorImageAndName{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.creatorImageAndName img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+.creatorImageAndName p{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+}
+.linkWrapper{
+    width: 155px;
+}
+.authRequired{
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+.authRequired div{
+    display: flex;
+    flex-direction: column;
+}
+.authRequired div h2{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* popup */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    z-index: 1;
+  }
+ 
+  .overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+ 
+  .wrapperBlur {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .popupContent{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: static;
+    z-index: 3;
+    padding: 2em;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  .popupContent h2{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .popupContent button{
+    width: 50%;
+  }
+  .loaderBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .noItems{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .noItems p{
+    font-size: 24px;
+    font-weight: 500;
+  }
+@media (max-width: 1024px) {
+    .nftImage{
+        width: 350px;
+        height: 350px;
+    }
+    .authRequired div h2{
+        font-size: 18px;
+    }
+    .nftWrapper{
+        padding: 25px;
+        height: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+    .titleAndDesc, .infoWrapper,.priceAndCurAndBtn{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .titleAndDesc h1{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 24px;
+    }
+    .titleAndDesc p{
+        font-size: 16px;
+    }
+    .priceAndCurWrapper h3{
+        font-size: 15px;
+    }
+    .infoWrapper{
+        max-width: 100%;
+    }
+    .popupContent{
+        margin: 400px 0 0 0 ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 3;
+        padding: 2em;
+        width: 400px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+      }
+
+      .noItems{
+        width: 100%;
+        height: 450px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+      .noItems p{
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+      }
+}
+
+@media (max-width:450px) {
+    .nftImage{
+        width: 250px;
+        height: 250px;
+    }
+    .nftWrapper{
+        padding: 15px;
+        align-items: center;
+        flex-direction: column;
+    }
+    .titleAndDesc, .infoWrapper,.priceAndCurAndBtn{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .titleAndDesc h1{
+        margin-top: 20px;
+        text-align: center;
+        font-size: 24px;
+    }
+    .titleAndDesc p{
+        font-size: 13px;
+    }
+    .priceAndCurWrapper h3{
+        font-size: 15px;
+    }
+    .infoWrapper{
+        max-width: 100%;
+    }
+    .popupContent{
+        margin: 400px 0 0 0 ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        z-index: 3;
+        padding: 2em;
+        width: 300px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+      }
+      .popupContent h2{
+        font-size: 16px;
+      }
+}

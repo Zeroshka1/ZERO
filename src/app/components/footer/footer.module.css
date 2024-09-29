@@ -1,0 +1,90 @@
+.footerWrapper{
+    margin-top: 100px;
+    color: white;
+    background-color: #000000;
+    padding: 85px 0;
+}
+
+.logoInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logo h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+.info{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.info a{
+    color: #ffffff;
+}
+
+.line{
+    margin: 25px 0 57px;
+    background-color:  #818181;
+    height: 1px;
+}
+
+.copSoc{
+    margin-top: 57px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.copSoc p{
+    color: #ffffff;
+    font-weight: 500;
+}
+.copSoc nav{
+    display: flex;
+    gap: 50px;
+}
+
+.socialMobile a{
+    display: none;
+}
+
+
+@media (max-width: 1024px){  
+    .socialPC a{
+        display: none;
+    }
+    .socialMobile{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .socialMobile a{
+        display: flex; 
+    }
+    .logoInfo{
+       flex-wrap: wrap;
+       display: flex;
+
+    }
+    .logo{
+        font-size: 20px;
+    }
+    .copSoc{
+        justify-content: center;
+    }
+    .info{
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+        font-weight: 600;
+    }
+}
