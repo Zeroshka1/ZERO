@@ -17,7 +17,8 @@ const AuthForm = ({ onAuthSuccess, onClose }) => {
   useEffect(() => {
     setOpen(true);
   }, []);
-
+ 
+  
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
