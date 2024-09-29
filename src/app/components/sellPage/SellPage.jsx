@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation'; 
 import FormSell from './formSell/FormSell';
 import styles from './sellPage.module.css';
-import Loader from '../loader/Loader';
+import Loader from '../loader/Loader.jsx';
 
 const SellPage = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);

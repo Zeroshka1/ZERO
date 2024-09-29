@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import AuthForm from '../accountForm/AuthForm';
+import AuthForm from '../accountForm/AuthForm.jsx';
 import styles from '../accountPage.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import Loader from '../../loader/Loader'; 
+import Loader from '../../loader/Loader.jsx'; 
 
 const AccountProfile = () => {
   const [profileData, setProfileData] = useState(null);

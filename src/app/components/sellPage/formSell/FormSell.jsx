@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import styles from '../sellPage.module.css';
 import Image from 'next/image';
-import Loader from '../../loader/Loader'; // Подключаем лоадер
+import Loader from '../../loader/Loader.jsx'; 
 
 function FormSell() {
     const [price, setPrice] = useState('');
@@ -12,9 +12,9 @@ function FormSell() {
     const [image, setImage] = useState(null);
     const [imagePreview, setImagePreview] = useState(null);
     const [selectedCurrency, setSelectedCurrency] = useState('RUB');
-    const [isLoading, setIsLoading] = useState(false); // Состояние загрузки
-    const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false); // Состояние попапа
-    const [popupActive, setPopupActive] = useState(false); // Для управления классом active
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSuccessPopupVisible, setIsSuccessPopupVisible] = useState(false);
+    const [popupActive, setPopupActive] = useState(false);
 
     const handleImageUpload = (e) => {
         const file = e.target.files[0];

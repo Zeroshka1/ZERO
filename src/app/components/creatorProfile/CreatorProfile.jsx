@@ -1,9 +1,9 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import styles from './creatorProfile.module.css'; // Общие стили
+import styles from './creatorProfile.module.css';
 import defAvatar from '@/../public/images/default-avatar.png';
-import Loader from '@/app/components/loader/Loader';
+import Loader from '@/app/components/loader/Loader.jsx';
 import Link from 'next/link';
 
 const CreatorProfile = ({ userId }) => {

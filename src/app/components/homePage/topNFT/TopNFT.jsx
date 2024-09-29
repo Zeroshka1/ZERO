@@ -7,9 +7,9 @@ import {
     PrevButton,
     NextButton,
     usePrevNextButtons
-} from './EmblaCarouselArrowButtons'
+} from './EmblaCarouselArrowButtons.jsx'
 import useEmblaCarousel from 'embla-carousel-react'
-import Loader from '../../loader/Loader';
+import Loader from '../../loader/Loader.jsx';
 
 const NFTSlider = () => {
     const [nfts, setNfts] = useState([]);

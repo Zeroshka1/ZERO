@@ -3,7 +3,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import Image from 'next/image';
 import styles from '../discoverPage.module.css';
 import Link from 'next/link';
-import Loader from '../../loader/Loader';
+import Loader from '../../loader/Loader.jsx';
 
 const ITEMS_PER_PAGE = 6; 
 

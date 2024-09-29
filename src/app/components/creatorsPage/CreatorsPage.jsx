@@ -1,6 +1,6 @@
-'use client'; // Убедитесь, что это указано
+'use client';
 import React from 'react'
-import CreatorCollections from './CreatorCollections/CreatorCollections'
+import CreatorCollections from './CreatorCollections/CreatorCollections.jsx'
 
 const CreatorsPage = () => {
   return (

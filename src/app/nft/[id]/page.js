@@ -1,6 +1,6 @@
-import Footer from '@/app/components/footer/Footer';
-import Header from '@/app/components/header/Header';
-import NFTPage from '@/app/components/nftPage/NftPage';
+import Footer from '@/app/components/footer/Footer.jsx';
+import Header from '@/app/components/header/Header.jsx';
+import NFTPage from '@/app/components/nftPage/NftPage.jsx';
 import React from 'react';
 
 const NftPage = ({ params }) => {

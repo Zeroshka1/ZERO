@@ -1,6 +1,6 @@
 import React from 'react'
-import StartBaner from './startBaner/StartBaner'
-import TopNFT from './topNFT/TopNFT'
+import StartBaner from './startBaner/StartBaner.jsx'
+import TopNFT from './topNFT/TopNFT.jsx'
 
 const HomePage = () => {
     return (

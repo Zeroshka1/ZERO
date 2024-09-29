@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import styles from './nftPage.module.css';
 import WalletLogo from '@/../public/images/pay.png';
-import Loader from '../loader/Loader';
+import Loader from '../loader/Loader.jsx';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 

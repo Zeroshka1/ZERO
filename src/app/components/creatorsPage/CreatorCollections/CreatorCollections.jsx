@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import styles from '../creatorsPage.module.css';
 import defAvatar from '@/../public/images/default-avatar.png';
-import Loader from '../../loader/Loader';
+import Loader from '../../loader/Loader.jsx';
 
 const ITEMS_PER_PAGE = 4;
 

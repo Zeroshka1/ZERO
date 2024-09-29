@@ -2,10 +2,10 @@
 import Image from "next/image";
 import Logo from '../../../../public/images/Logo.png';
 import styles from './header.module.css';
-import MobileMenu from "./mobileMenu/MobileMenu";
+import MobileMenu from "./mobileMenu/MobileMenu.jsx";
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import SearchBar from "./searchBar/SearchBar";
+import SearchBar from "./searchBar/SearchBar.jsx";
 
 const Header = () => {
   const menuItemsData = [

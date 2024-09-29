@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from '../header.module.css'
 import Logo from '../../../../../public/images/Logo.png'
 import { useState } from "react";
-import SearchBar from '../searchBar/SearchBar';
+import SearchBar from '../searchBar/SearchBar.jsx';
 
 function MobileMenu() {
     const [open, setOpen] = useState(false)
