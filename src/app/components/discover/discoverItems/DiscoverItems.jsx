@@ -5,14 +5,14 @@ import styles from '../discoverPage.module.css';
 import Link from 'next/link';
 import Loader from '../../loader/Loader.jsx';
 
-const ITEMS_PER_PAGE = 6; 
+const ITEMS_PER_PAGE = 6;
 
 const DiscoverItems = () => {
-    const [nfts, setNfts] = useState([]); 
-    const [visibleNFTs, setVisibleNFTs] = useState([]); 
+    const [nfts, setNfts] = useState([]);
+    const [visibleNFTs, setVisibleNFTs] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [currentPage, setCurrentPage] = useState(1);
-    const [isLoadingMore, setIsLoadingMore] = useState(false); 
+    const [isLoadingMore, setIsLoadingMore] = useState(false);
 
 
     useEffect(() => {
@@ -21,11 +21,11 @@ const DiscoverItems = () => {
                 const res = await fetch('/api/get-nfts');
                 const data = await res.json();
                 setNfts(data);
-                setVisibleNFTs(data.slice(0, ITEMS_PER_PAGE)); 
-                setIsLoading(false); 
+                setVisibleNFTs(data.slice(0, ITEMS_PER_PAGE));
+                setIsLoading(false);
             } catch (error) {
                 console.error('Ошибка при получении данных NFT:', error);
-                setIsLoading(false); 
+                setIsLoading(false);
             }
         }
         fetchNFTs();
@@ -35,7 +35,7 @@ const DiscoverItems = () => {
     const loadMoreNFTs = useCallback(() => {
         if (isLoadingMore || isLoading) return;
 
-        setIsLoadingMore(true); 
+        setIsLoadingMore(true);
         const nextPage = currentPage + 1;
         const startIndex = (nextPage - 1) * ITEMS_PER_PAGE;
         const endIndex = startIndex + ITEMS_PER_PAGE;
@@ -47,7 +47,7 @@ const DiscoverItems = () => {
             ]);
             setCurrentPage(nextPage);
             setIsLoadingMore(false);
-        }, 500); 
+        }, 500);
     }, [nfts, currentPage, isLoadingMore, isLoading]);
 
 
@@ -59,7 +59,7 @@ const DiscoverItems = () => {
                 !isLoading &&
                 visibleNFTs.length < nfts.length
             ) {
-                loadMoreNFTs(); 
+                loadMoreNFTs();
             }
         };
 
@@ -94,10 +94,12 @@ const DiscoverItems = () => {
                         </div>
                     ))
                 )}
-            </div>) : (<div className={styles.noNFTs}><p>There are no NFTs available.</p></div>)}
+            </div>) : (<div className={styles.loaderWrapper}>
+                <Loader />
+            </div>)}
 
 
- 
+
             {isLoadingMore && (
                 <div className={styles.loaderWrapper}>
                     <Loader />
