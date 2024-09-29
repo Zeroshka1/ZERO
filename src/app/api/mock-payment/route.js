@@ -41,9 +41,8 @@ export async function POST(request) {
       `,
     };
 
-    // Удаление NFT из базы данных
     try {
-      await pool.query('DELETE FROM artworks WHERE id = $1', [nftData.id]); // Замените на соответствующее имя таблицы и поле id
+      await pool.query('DELETE FROM artworks WHERE id = $1', [nftData.id]);
       await transporter.sendMail(mailOptions);
       return NextResponse.json({ status: 'success', message: 'Payment completed successfully and email sent!' });
     } catch (dbError) {

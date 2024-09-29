@@ -35,7 +35,7 @@ export async function GET(req) {
 
         return new Response(JSON.stringify(result.rows), { status: 200 });
     } catch (error) {
-        console.error('Ошибка поиска NFT:', error);
-        return new Response(JSON.stringify({ error: 'Ошибка получения данных' }), { status: 500 });
+        console.error('NFTC Search Error:', error);
+        return new Response(JSON.stringify({ error: 'Error receiving the NFT:' }), { status: 500 });
     }
 }

@@ -33,7 +33,7 @@ export async function GET(req, { params }) {
 
         return new Response(JSON.stringify(result.rows[0]), { status: 200 });
     } catch (error) {
-        console.error('Ошибка получения NFT:', error);
-        return new Response(JSON.stringify({ error: 'Ошибка получения данных' }), { status: 500 });
+        console.error('Error receiving the NFT:', error);
+        return new Response(JSON.stringify({ error: 'Error receiving the NFT:' }), { status: 500 });
     }
 }

@@ -37,7 +37,7 @@ export async function POST(request) {
 
     return NextResponse.json({ token }, { status: 200 });
   } catch (error) {
-    console.error('Ошибка при обработке запроса:', error);
+    console.error('Error processing the request:', error);
     return NextResponse.json({ error: 'An error occurred. Please try again later.' }, { status: 500 });
   }
 }
