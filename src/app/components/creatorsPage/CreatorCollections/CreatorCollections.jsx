@@ -74,11 +74,6 @@ const CreatorCollections = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [loadMoreCollections, visibleCollections, collections, isLoadingMore, isLoading]);
 
-    if (isLoading) {
-        console.log('Loading collections...');
-        return <div className={styles.loaderWrapper}><Loader /></div>;
-    }
-
     if (error) {
         console.error('Error:', error);
         return <div>Error: {error}</div>;
@@ -94,7 +89,7 @@ const CreatorCollections = () => {
             <h1>Creator Collections</h1>
             <div className={styles.collectionWrapper}>
                 {visibleCollections.length === 0 ? (
-                    <p className={styles.noCollections}>There are no collections available.</p>
+                    <div className={styles.loaderWrapper}><Loader /></div>
                 ) : (
                     visibleCollections.map((user) => {
                         const nftCount = user.collections.length;
